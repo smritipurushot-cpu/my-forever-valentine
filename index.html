@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Shireesh ❤️</title>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px 20px;
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.22);
+      backdrop-filter: blur(12px);
+      padding: 45px;
+      border-radius: 30px;
+      max-width: 750px;
+      margin: auto;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+    }
+
+    img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 20px;
+      margin: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 15px 35px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 40px;
+      background: #fff;
+      color: #ff4d6d;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.35rem;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      font-size: 3rem;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+    <h1>For Shireesh ❤️</h1>
+
+    <p>
+      Somewhere between laughter, late talks,<br>
+      and shared dreams — you became my home 🥹💕<br><br>
+
+      Loving you feels effortless, dramatic,
+      comforting and magical… all at once 🎬✨
+    </p>
+
+    <!-- Photos -->
+    <div>
+      <img src="photo1.jpg" alt="Us">
+      <img src="photo2.jpg" alt="Us again">
+    </div>
+
+    <button onclick="showLove()">Click carefully ❤️</button>
+
+    <div id="love" class="hidden">
+      <div class="heart">❤️</div><br>
+
+      If love had a face, a laugh,
+      and a heartbeat — it would be you 🥹<br><br>
+
+      I choose you.  
+      On easy days.  
+      On hard days.  
+      In every lifetime 💕<br><br>
+
+      <strong>Happy Valentine’s Day, my forever.</strong><br><br>
+
+      Love,<br>
+      <strong>Smriti</strong><br><br>
+
+      <button onclick="showForever()">Will you be my forever? 💍</button>
+
+      <div id="forever" class="hidden">
+        <br>Good. Because I already am yours 😌❤️
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showLove() {
+      document.getElementById("love").style.display = "block";
+    }
+    function showForever() {
+      document.getElementById("forever").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
