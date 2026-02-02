@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>For Shireesh ❤️</title>
-
+  <title>Valentine Quiz for Shireesh ❤️</title>
   <style>
     body {
       background: linear-gradient(135deg, #ff758c, #ff7eb3);
@@ -18,7 +17,7 @@
       backdrop-filter: blur(12px);
       padding: 45px;
       border-radius: 30px;
-      max-width: 750px;
+      max-width: 700px;
       margin: auto;
       box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     }
@@ -31,14 +30,6 @@
     p {
       font-size: 1.3rem;
       line-height: 1.8;
-    }
-
-    img {
-      width: 100%;
-      max-width: 250px;
-      border-radius: 20px;
-      margin: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
 
     button {
@@ -74,70 +65,90 @@
       animation: pulse 1.5s infinite;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.25); }
-      100% { transform: scale(1); }
+    .confetti {
+      font-size: 2rem;
+      animation: float 3s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(15deg); }
+      100% { transform: translateY(0) rotate(-15deg); }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Background music -->
-  <audio autoplay loop>
-    <source src="song.mp3" type="audio/mpeg">
-  </audio>
-
   <div class="card">
-    <h1>For Shireesh ❤️</h1>
+    <h1>Valentine Quiz for Shireesh ❤️</h1>
 
-    <p>
-      Somewhere between laughter, late talks,<br>
-      and shared dreams — you became my home 🥹💕<br><br>
+    <p>Let’s see how well you know your Valentine 😉</p>
 
-      Loving you feels effortless, dramatic,
-      comforting and magical… all at once 🎬✨
-    </p>
+    <!-- Question 1 -->
+    <p>Q1: What’s my favourite thing about you?</p>
+    <button onclick="answer('wrong1')">Your hairstyle 😅</button>
+    <button onclick="answer('correct')">Your smile 🥹</button>
+    <button onclick="answer('wrong2')">Your socks 🧦</button>
 
-    <!-- Photos -->
-    <div>
-      <img src="photo1.jpg" alt="Us">
-      <img src="photo2.jpg" alt="Us again">
+    <!-- Question 2 -->
+    <div id="correct" class="hidden">
+      🎉 Correct! Your smile makes my heart melt every day 💕<br><br>
+      Q2: Where did we first meet?<br>
+      <button onclick="answer2('wrong')">At a café ☕</button>
+      <button onclick="answer2('correct')">By destiny ✨</button>
+      <button onclick="answer2('wrong')">At a party 🎉</button>
     </div>
 
-    <button onclick="showLove()">Click carefully ❤️</button>
+    <!-- Question 3 -->
+    <div id="correct2" class="hidden">
+      🥰 Right again! Destiny brought us together.<br><br>
+      Q3: What’s my favourite movie genre for us?<br>
+      <button onclick="answer3('wrong')">Horror 👻</button>
+      <button onclick="answer3('correct')">Romantic 🎬</button>
+      <button onclick="answer3('wrong')">Action 💥</button>
+    </div>
 
-    <div id="love" class="hidden">
-      <div class="heart">❤️</div><br>
+    <!-- Quiz Completed -->
+    <div id="correct3" class="hidden">
+      💖 Yes! Romantic movies = our vibe 🥹<br><br>
+      <div class="heart">❤️</div>
+      You nailed the quiz! Happy Valentine’s Day, my forever 💕<br>
+      Love, <strong>Smriti</strong><br><br>
 
-      If love had a face, a laugh,
-      and a heartbeat — it would be you 🥹<br><br>
+      <!-- Special Surprise Button -->
+      <button onclick="showSurprise()">Click for a Special Surprise 🎁</button>
 
-      I choose you.  
-      On easy days.  
-      On hard days.  
-      In every lifetime 💕<br><br>
-
-      <strong>Happy Valentine’s Day, my forever.</strong><br><br>
-
-      Love,<br>
-      <strong>Smriti</strong><br><br>
-
-      <button onclick="showForever()">Will you be my forever? 💍</button>
-
-      <div id="forever" class="hidden">
-        <br>Good. Because I already am yours 😌❤️
+      <div id="surprise" class="hidden">
+        <div class="confetti">🎉🎊💖🎊🎉</div><br>
+        🥹 Surprise! I have a little confession…  
+        You are my today, tomorrow, and forever.  
+        I love you more than words can say 💕<br><br>
+        Forever yours,  
+        <strong>Smriti ❤️</strong>
       </div>
     </div>
+
   </div>
 
   <script>
-    function showLove() {
-      document.getElementById("love").style.display = "block";
+    function answer(id) {
+      if(id === 'correct') {
+        document.getElementById('correct').style.display = 'block';
+      }
     }
-    function showForever() {
-      document.getElementById("forever").style.display = "block";
+    function answer2(id) {
+      if(id === 'correct') {
+        document.getElementById('correct2').style.display = 'block';
+      }
+    }
+    function answer3(id) {
+      if(id === 'correct') {
+        document.getElementById('correct3').style.display = 'block';
+      }
+    }
+    function showSurprise() {
+      document.getElementById('surprise').style.display = 'block';
     }
   </script>
 
